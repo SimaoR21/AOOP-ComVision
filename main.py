@@ -60,10 +60,10 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
                 cv2.putText(image, "Alerta: ombros desnivelados",
                             (30, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 165, 255), 2)
 
-            # Verificação 3: Coluna curvada (desvio horizontal entre ombros e quadris)
+            # Verificação 3: Coluna torta (desvio horizontal entre ombros e quadris)
             spine_offset_x = abs(center_shoulder[0] - center_hip[0])
             if spine_offset_x > 40:
-                cv2.putText(image, "Alerta: coluna curvada",
+                cv2.putText(image, "Alerta: coluna torta",
                             (30, 110), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
 
             # Linhas visuais
