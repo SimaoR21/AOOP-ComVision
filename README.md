@@ -30,3 +30,22 @@ pip install mediapipe opencv-python
 
 python main.py
 
+#  LLMs & MMLMs
+
+##  Descrição
+
+Este projeto utiliza a API do OpenRouter com o modelo "mistralai/mistral-7b-instruct" para gerar feedback personalizado sobre postura corporal, baseado em alertas detectados. A função get_llm_feedback envia os problemas identificados (como cabeça inclinada, ombros desnivelados ou coluna torta) e recebe sugestões concisas. O feedback é processado em tempo real, exibido na interface com OpenCV, e atualizado a cada 5 segundos se os alertas mudarem, utilizando um thread separado para gerenciar as chamadas à API de forma assíncrona.
+
+##  Instalações
+
+Antes de correr o programa, corra o seguinte comando:
+
+pip install -r requirements.txt
+
+##  Como executar
+
+1. Garante que tens uma câmara ligada ao computador.
+2. Poderá ter de alterar a key da api.
+3. Corre o ficheiro Python que contém o código (main.py):
+
+python main.py
